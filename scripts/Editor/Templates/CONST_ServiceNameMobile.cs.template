@@ -1,0 +1,13 @@
+﻿using RadicalGraphics.Services.Base;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace RadicalGraphics.Services.CONST_ServiceName
+{
+    public class CONST_ServiceNameServiceMobile : CONST_ServiceNameService
+    {
+
+    }
+}

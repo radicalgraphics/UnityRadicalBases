@@ -1,0 +1,24 @@
+﻿using RadicalGraphics.Services.Base;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace RadicalGraphics.Services.CONST_ServiceName
+{
+    public abstract class CONST_ServiceNameService: Service<CONST_ServiceNameService>
+    {
+        private static CONST_ServiceNameService m_instance = GeneratePlatformDependantInstance();
+        public static CONST_ServiceNameService Instance { get => m_instance; }
+
+        private static CONST_ServiceNameService GeneratePlatformDependantInstance()
+        {
+
+            if (Application.isMobilePlatform)
+                return new CONST_ServiceNameServiceMobile();
+
+            else return new CONST_ServiceNameServiceMobile();
+
+        }
+    }
+}

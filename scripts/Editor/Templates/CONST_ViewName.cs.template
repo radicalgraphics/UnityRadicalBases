@@ -1,0 +1,31 @@
+﻿using RadicalGraphics.Core;
+
+namespace RadicalGraphics.Scenes.CONST_ModuleName
+{
+    public interface CONST_InterfaceName
+    {
+        // TODO: declare here view methods to call them from controller context
+    }
+
+    public class CONST_ViewName : Showeable, CONST_InterfaceName
+    {      
+        #region Protected Methods
+        protected override void Awake()
+        {
+            base.Awake();
+
+            // TODO_OPTIONAL: change here if you want the scale animation transform using SetTransform(transform.Find("example")
+        }
+        #endregion
+
+
+        #region View Methods
+        // TODO: define here view methods to call them from controller context
+        #endregion
+
+
+        #region Private Methods
+        // TODO: define here methods called from view methods
+        #endregion
+    }
+}

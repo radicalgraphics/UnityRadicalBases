@@ -1,0 +1,58 @@
+﻿using UnityEngine;
+using RadicalGraphics.Core;
+
+namespace RadicalGraphics.Scenes.CONST_ModuleName
+{
+    [RequireComponent(typeof(CONST_ViewName))]
+    public class CONST_ControllerName : ModuleController
+    {
+        #region Private Fields
+        private CONST_InterfaceName m_view;
+        private CONST_ModelName m_data;
+        #endregion
+        
+
+        #region Protected Methods
+        protected override void Awake()
+        {
+            m_view = GetComponent<CONST_InterfaceName>();
+
+            base.Awake();
+            
+            m_sceneName = "CONST_ModuleNameScene";
+            m_data = new CONST_ModelName();
+        }
+
+        protected override void RegisterActions()
+        {
+            // TODO: initialize dictionaries with actions for buttons, toggles, dropdowns and EventBUs event.
+            
+            // The actions will be executed for game objects subscribed from Editor to OnClick, OnToggleChanged and OnDropdownChanged methods. Some examples:
+            // m_actions.Add("BTN_Success", () => { m_view.DoSomething(); });
+            // m_toggleActions.Add("TGL_Male", (value) => { m_view.DoSomethingWithBool(isMale); });
+            // m_dropdownActions.Add("DRP_City", (value) => { m_view.DoSomethingWithInteger(value); });
+
+            // The event must be parsed to the explicit type in order to access internal data. Some examples:
+            /* m_busActions.Add(typeof(OnSomeEvent), (event) => {
+                OnSomeEvent _event = (OnSomeEvent)event;
+                m_view.DOSomethingWithEvent(_event);
+            }); */
+        }
+
+        protected override void SetData()
+        {
+            // TODO: initialize model with services data (if it's not initialized externally using Data property).
+            // TODO: call view methods to display data.
+        }
+        #endregion
+
+
+        #region Properties
+        public CONST_ModelName Model
+        {
+            get { return m_data; }
+            set { m_data = value; }
+        }
+        #endregion
+    }
+}

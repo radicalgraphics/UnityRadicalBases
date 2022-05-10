@@ -1,0 +1,10 @@
+﻿using System;
+
+namespace RadicalGraphics.Scenes.CONST_ModuleName
+{
+    [Serializable]
+    public class CONST_ModelName
+    {
+        // TODO: declare here public fields to persist module data
+    }
+}
